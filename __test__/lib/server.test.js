@@ -1,17 +1,13 @@
 'use strict';
 
-// Vinicio - this is called de-structuring
 const {server} = require('../../lib/server.js');
 const supertest = require('supertest');
-// Vinicio - we are creating an instance of superTest with the server we created
 const mockRequest = supertest(server);
 
 describe('web server', () => {
 
   it('should respond with a 500 on an error', () => {
 
-			// Vinicio - here you can do mockRequest.ANY_ROUTE, and it'll call a fake
-			// version of your server
     return mockRequest
       .get('/foo')
       .then(results => {
