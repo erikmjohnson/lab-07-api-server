@@ -15,7 +15,7 @@ describe('web server', () => {
       }).catch(console.error);
 
   });
-  
+
   it('should respond with a 404 on an invalid route', () => {
 
     return mockRequest
@@ -47,3 +47,4 @@ describe('web server', () => {
   });
 
 });
+
