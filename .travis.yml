@@ -1,6 +1,5 @@
 language: node_js
 node_js:
-  - 'stable'
+  - '9'
 script:
-  - npm test
-#  - npm run lint
+  - jest server.test.js
