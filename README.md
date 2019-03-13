@@ -2,13 +2,13 @@ LAB 07
 ==============================================
 
 ## LAB 07
-[![Build Status](https://travis-ci.com/erikmjohnson/lab-07-testing.svg?branch=master)
+[![Build Status](https://travis-ci.com/erikmjohnson/lab-07-api-server.svg?branch=master)
 
 ### Author: Erik M Johnson
 
 ### Links and Resources
 * [repo](https://github.com/erikmjohnson/lab-07-api-server)
-* [travis](https://travis-ci.com/erikmjohnson/lab-07-testing)
+* [travis](https://travis-ci.com/erikmjohnson/lab-07-api-server)
 
 ### Modules
 #### server.js
