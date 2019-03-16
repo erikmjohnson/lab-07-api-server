@@ -1,0 +1,116 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Lab 07, documentation on api server",
+    "version": "1.0.0",
+    "title": "API Server"
+  },
+  "paths": {
+    "/foo": {
+      "get": {
+        "description": "Purposely Throws an error ",
+        "responses": {
+          "200": {
+            "description": "Returns an error",
+            "schema": {
+              "$ref": "#/definitions/Posts"
+            }
+          }
+        }
+      }
+    },
+    "/posts": {
+      "get": {
+        "description": "Selects all posts",
+        "responses": {
+          "200": {
+            "description": "Returns all posts",
+            "schema": {
+              "$ref": "#/definitions/Posts"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "creates new post",
+        "responses": {
+          "200": {
+            "description": "new post is created",
+            "schema": {
+              "$ref": "#/definitions/Posts"
+            }
+          }
+        }
+      }
+    },
+    "/posts/:id": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "get": {
+        "description": "Selects one posts by Id",
+        "responses": {
+          "200": {
+            "description": "Returns specified book",
+            "schema": {
+              "$ref": "#/definitions/Posts"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Selects one post by Id, and updates post",
+        "responses": {
+          "200": {
+            "description": "post has been updated",
+            "schema": {
+              "$ref": "#/definitions/Posts"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Selects one post by Id, and deletes it ",
+        "responses": {
+          "200": {
+            "description": "post is deleted",
+            "schema": {
+              "$ref": "#/definitions/Posts"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Posts": {
+      "properties" : {
+        "id" : {
+          "type" : "number"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "Author" : {
+          "type" : "string"
+        },
+        "Title" : {
+          "type" : "string"
+        },
+        "Article" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ]
+}
